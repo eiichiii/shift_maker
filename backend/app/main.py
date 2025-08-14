@@ -1,5 +1,12 @@
+"""FastAPI application entry point."""
 from fastapi import FastAPI
-from .routers import shift_requests
+from .routers import schedules
 
 app = FastAPI()
-app.include_router(shift_requests.router)
+app.include_router(schedules.router)
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Shift maker API"}
+
