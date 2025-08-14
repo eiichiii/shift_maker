@@ -1,0 +1,18 @@
+{
+  "dates": {
+    "2024-05-01": ["Alice", "Bob"],
+    "2024-05-02": ["Carol", "Dave"]
+  },
+  "assign_count": {
+    "Alice": 1,
+    "Bob": 1,
+    "Carol": 1,
+    "Dave": 1
+  },
+  "committee_count": 2,
+  "gender_count": {
+    "male": 2,
+    "female": 2
+  },
+  "unapplied_rules": ["Rule X", "Rule Y"]
+}
