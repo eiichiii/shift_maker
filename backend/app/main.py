@@ -9,3 +9,4 @@ app.include_router(schedules.router)
 @app.get("/")
 def read_root():
     return {"message": "Shift maker API"}
+
