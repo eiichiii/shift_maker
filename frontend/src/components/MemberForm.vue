@@ -40,13 +40,17 @@
     <div v-if="message" :class="messageClass">
       {{ message }}
     </div>
+
+    <!-- CSV Upload Section -->
+    <MemberCSVUpload @upload-completed="onCSVUploadCompleted" />
   </div>
 </template>
 
 <script setup>
 import { ref, reactive } from 'vue'
+import MemberCSVUpload from './MemberCSVUpload.vue'
 
-const emit = defineEmits(['memberAdded'])
+const emit = defineEmits(['memberAdded', 'membersUploaded'])
 
 const form = reactive({
   name: '',
@@ -100,6 +104,12 @@ const submitMember = async () => {
   } finally {
     isSubmitting.value = false
   }
+}
+
+const onCSVUploadCompleted = (result) => {
+  console.log('CSV upload completed:', result)
+  // Emit event to parent to refresh member list
+  emit('membersUploaded', result)
 }
 </script>
 
