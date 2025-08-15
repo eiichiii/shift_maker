@@ -1,8 +1,12 @@
 <template>
-  <h1>Hello Vue!</h1>
+  <div>
+    <h1>Shift Maker</h1>
+    <ScheduleTable />
+  </div>
 </template>
 
 <script setup>
+import ScheduleTable from './components/ScheduleTable.vue'
 </script>
 
 <style scoped>
