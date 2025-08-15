@@ -1,29 +1,29 @@
 # Shift Maker
 
-This repository contains a minimal FastAPI backend and Vue.js frontend.
+このリポジトリは、最小限の FastAPI バックエンドと Vue.js フロントエンドを含んでいます。
 
-## Requirements
-- Python 3.11+
-- Node.js 18+
+## 必要条件
+- Python 3.11 以上
+- Node.js 18 以上
 - npm
 
-## Backend setup
-1. Install dependencies:
+## バックエンドのセットアップ
+1. 依存関係をインストールします:
    ```bash
    pip install fastapi uvicorn
    ```
-2. Start the development server:
+2. 開発サーバーを起動します:
    ```bash
    uvicorn backend.main:app --reload
    ```
 
-## Frontend setup
-1. Change into the frontend directory and install dependencies:
+## フロントエンドのセットアップ
+1. frontend ディレクトリに移動して依存関係をインストールします:
    ```bash
    cd frontend
    npm install
    ```
-2. Start the development server:
+2. 開発サーバーを起動します:
    ```bash
    npm run dev
    ```
