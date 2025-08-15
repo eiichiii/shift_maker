@@ -42,10 +42,22 @@ import { ref, onMounted } from 'vue'
 
 const schedule = ref({})
 
-onMounted(async () => {
+const loadSchedule = async () => {
   const res = await fetch('/schedules/latest')
   if (res.ok) {
     schedule.value = await res.json()
   }
+}
+
+const refreshSchedule = () => {
+  loadSchedule()
+}
+
+onMounted(() => {
+  loadSchedule()
+})
+
+defineExpose({
+  refreshSchedule
 })
 </script>

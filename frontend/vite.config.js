@@ -5,8 +5,11 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     proxy: {
-      '/schedules': 'http://localhost:8000',
-      '/shift-requests': 'http://localhost:8000'
+      '/schedules': 'http://localhost:8001',
+      '/shift-requests': 'http://localhost:8001',
+      '/members': 'http://localhost:8001',
+      '/availabilities': 'http://localhost:8001',
+      '/shift-generation': 'http://localhost:8001'
     }
   }
 })

@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# Frontend
+node_modules/
+package-lock.json
