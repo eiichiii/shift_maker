@@ -52,3 +52,20 @@ def create_member(
 def list_members(db: Session = Depends(get_db)) -> List[Member]:
     """List all members."""
     return db.query(Member).all()
+
+
+@router.delete("/{member_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_member(
+    member_id: int,
+    db: Session = Depends(get_db),
+) -> None:
+    """Delete a member by ID."""
+    db_member = db.query(Member).filter(Member.id == member_id).first()
+    if db_member is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Member with id {member_id} not found"
+        )
+    
+    db.delete(db_member)
+    db.commit()

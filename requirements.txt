@@ -1,3 +1,7 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
 pytest
 pre-commit
 black

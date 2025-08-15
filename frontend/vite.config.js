@@ -6,7 +6,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/schedules': 'http://localhost:8000',
-      '/shift-requests': 'http://localhost:8000'
+      '/shift-requests': 'http://localhost:8000',
+      '/members': 'http://localhost:8000'
     }
   }
 })
